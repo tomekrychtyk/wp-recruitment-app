@@ -1,0 +1,8 @@
+node_modules
+
+/backend/.serverless
+/backend/.webpack
+/backend/yarn-error.log
+
+/client/yarn-error.log
+/client/dist
