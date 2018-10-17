@@ -1,0 +1,8 @@
+{
+  "body": "{ \"thumbUrl\": \"http://thumb.url\", \"regularUrl\": \"http://regular.url\" }",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}

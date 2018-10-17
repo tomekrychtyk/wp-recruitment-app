@@ -1,0 +1,10 @@
+{
+  "pathParameters": {
+    "photoId": "6b1a8350-cd44-11e8-b649-4fd2d6161000"
+  },
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}

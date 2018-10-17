@@ -1,0 +1,129 @@
+{
+  "name": "wp-recruitment-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "eslint": "eslint .",
+    "plop": "plop"
+  },
+  "eslintIgnore": [
+    "dist",
+    "devtools/templates/"
+  ],
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "jquery": true,
+      "jest": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": [
+            "Link"
+          ],
+          "specialLink": [
+            "to"
+          ]
+        }
+      ],
+      "import/no-extraneous-dependencies": [
+        "off",
+        {
+          "devDependencies": [
+            "*.test.js"
+          ]
+        }
+      ],
+      "padded-blocks": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react/no-danger": "off",
+      "jsx-a11y/label-has-for": [
+        2,
+        {
+          "components": [
+            "Label"
+          ],
+          "required": {
+            "every": [
+              "id"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "aws-amplify": "^1.1.6",
+    "axios": "^0.18.0",
+    "css-loader": "^1.0.0",
+    "history": "^4.7.2",
+    "immutable": "^3.8.2",
+    "less": "^3.8.1",
+    "loglevel": "^1.6.1",
+    "nprogress": "^0.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-facebook": "^6.0.14",
+    "react-infinite-scroller": "^1.2.2",
+    "react-placeholder": "^3.0.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.2",
+    "regenerator-runtime": "^0.12.1",
+    "unsplash-js": "^4.8.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "plop": "^2.1.0",
+    "redux-saga-test-plan": "^3.7.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack-bundle-analyzer": "^3.0.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
+  }
+}

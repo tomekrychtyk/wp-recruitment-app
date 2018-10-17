@@ -1,0 +1,34 @@
+.section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+
+  .sectionList {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top:2rem;
+  }
+
+  .filters {
+    select {
+      margin: 0.75rem 0 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 51rem) {
+  .section .sectionList {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 60rem) {
+  .section {
+    width: 60rem;
+  }
+}

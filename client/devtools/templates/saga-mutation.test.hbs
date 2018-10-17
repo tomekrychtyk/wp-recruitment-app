@@ -1,0 +1,35 @@
+import test from 'ava';
+import { testSaga } from 'redux-saga-test-plan';
+
+import { {{sagaName}}, watch{{sagaName}} } from './{{sagaFile}}';
+import gQLMutationCall from '../../../common/sagas/gql-mutation.saga';
+
+test('watcher invokes {{sagaName}} on proper action', () => {
+  const saga = testSaga(watch{{sagaName}});
+
+  saga
+    .next()
+    .takeLatestEffect(ACTION_NAME, {{sagaName}})
+    .finish()
+    .isDone();
+});
+
+test('works from start to end', () => {
+  const payload = {
+
+  };
+  const saga = testSaga({{sagaName}}, { payload });
+  const options = {
+    mutation: '',
+  };
+
+  saga
+    // start the generator
+    .next()
+
+    // Should call gQLMutationCall saga
+    .call(gQLMutationCall, options)
+
+    // Pass the result from gQLMutationCall to the next step
+    .next({ /* result */ });
+});

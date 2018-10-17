@@ -1,0 +1,48 @@
+.homeContainer {
+  position: relative;
+}
+
+.welcomeCopy {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  display: block;
+  background: hsla(0, 0%, 18%, 0.5);
+  padding-bottom: 1rem;
+}
+
+.smallerCopy {
+  font-size: 2rem;
+  display: block;
+}
+
+.cta {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 1px solid #b4b4b4;
+  background: hsla(0, 0, 18%, 0.6);
+  display: inline-block;
+  padding: 0.6rem;
+
+  a {
+    color: white;
+  }
+}
+
+@media (min-width: 40rem) and (min-height: 30rem) {
+  .welcomeCopy {
+    font-size: 5rem;
+    top: 50%;
+  }
+
+  .cta {
+    margin-top: 3rem;
+  }
+}

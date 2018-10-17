@@ -1,0 +1,58 @@
+.photoItem {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  text-align: center;
+
+  img {
+    width: 90%;
+  }
+}
+
+.photoInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: hsla(0, 0%, 0%, 0.5);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+
+  .details {
+    position: absolute;
+    top: 2rem;
+  }
+
+  .cta {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 40rem) {
+  .photo {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .photoItem {
+    width: auto;
+
+    img {
+      width: auto;
+    }
+  }
+}

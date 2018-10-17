@@ -1,0 +1,28 @@
+import { takeLatest, call, put } from 'redux-saga/effects';
+
+import log from '../../../../common/libraries/logger';
+import gQLQueryCall from '../../../../common/sagas/gql-query.saga';
+
+export function* {{sagaName}}() {
+  log.info('{{sagaName}} fired...');
+
+  const query = '';
+
+  try {
+    const result = yield call(gQLQueryCall, { query });
+
+    if (result) {
+      // Data received
+      log.info('[{{sagaName}}] Data received: ', result);
+    } else {
+      // No data received
+    }
+  } catch (e) {
+    log.info('Exception occured: ', e);
+  }
+}
+
+export function* watch{{sagaName}}() {
+  log.info('watch{{sagaName}} starting');
+  yield takeLatest(ACTION_NAME, {{sagaName}});
+}

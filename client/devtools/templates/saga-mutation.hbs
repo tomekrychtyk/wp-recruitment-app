@@ -1,0 +1,28 @@
+import { takeLatest, call } from 'redux-saga/effects';
+
+import log from '../../../common/libraries/logger';
+import gQLMutationCall from '../../../common/sagas/gql-mutation.saga';
+
+export function* {{sagaName}}({ payload }) {
+  log.info('{{sagaName}} fired...');
+
+  const options = {
+    mutation: '',
+  };
+
+  try {
+    const result = yield call(gQLMutationCall, options);
+    if (result) {
+      // Data received
+    } else {
+      // No data received
+    }
+  } catch (e) {
+    log.info('Exception occured: ', e);
+  }
+}
+
+export function* watch{{sagaName}}() {
+  log.info('watch{{sagaName}} starting');
+  yield takeLatest(ACTION_NAME, {{sagaName}});
+}

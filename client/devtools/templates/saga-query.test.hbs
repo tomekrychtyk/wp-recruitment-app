@@ -1,0 +1,45 @@
+import test from 'ava';
+import { testSaga } from 'redux-saga-test-plan';
+
+import { {{sagaName}}, watch{{sagaName}} } from './{{sagaFile}}';
+import gQLQueryCall from '../../../../common/sagas/gql-query.saga';
+
+test('watcher invokes the {{sagaName}} on proper action', () => {
+  const saga = testSaga(watch{{sagaName}});
+
+  saga.next()
+    .takeLatestEffect(ACTION_NAME, {{sagaName}})
+    .finish()
+    .isDone();
+});
+
+test('works from start to end', () => {
+  const payload = {
+
+  };
+  const saga = testSaga({{sagaName}}, { payload });
+  const query = '';
+
+  saga
+    // Start the generator
+    .next()
+
+    // Should call gQLQueryCall saga
+    .call(gQLQueryCall, { query })
+
+    // Pass the gQLQueryCall to the next step
+    .next({
+      /* result */
+    })
+
+    // When there's data received put the proper action
+    .put()
+
+    // Go back one step
+    .back()
+
+    // Pass no data to the gQLQueryCall call result
+    .next(null);
+
+    // Handle the case when there's no data
+});
